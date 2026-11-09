@@ -38,8 +38,6 @@ How can an off-grid solar power system be designed to maximize energy generation
 To be updated.
 
 ## System Design
-
-[Preliminary Design] 
 <img width="1127" height="740" alt="12aa58ae-4c10-4d4c-8165-4be6244fbec2" src="https://github.com/user-attachments/assets/ab68b49b-a6e2-4f0c-9406-19529d804254" />
 
 ## Solar Tracker Design
