@@ -13,11 +13,15 @@ Title: Off-Grid Solar Power System for Desert Environments
 
 ## Project Overview
 
-Design and development of an off-grid solar power system for desert environments.
+Design and development of an off-grid solar power station for a drone docking in a desert environment (UAE conditions). A dual-axis solar tracker provides power to the lithium-ion battery (the backup battery in the capstone), which can power the drone's dock and hub. The project is a scaled prototype of our full design in the capstone.
+
+**Scope:** The prototype is tested under controlled and outdoor environments. It uses low voltage DC only.
 
 ## Research Question
 
 How can an off-grid solar power system be designed to maximize energy generation and ensure reliable battery storage and ensure reliable battery storage in desert environments.
+
+**Hypothesis:** A dual-axis tracker that points the panel at the sun will generate at least 20% more energy per day than the panels that are constant.
 
 ## Project Status
 
@@ -63,6 +67,7 @@ Specification sign-off by the instructor is still pending.
 ## Updated Specifications
 
 Prototype requirements (scaled down from the capstone design)
+
 | ID | Requirement | Target | How it is verified |
 |---|---|---|---|
 | R1 | Daily energy supplied to the loads (electronics plus one drone-battery top-up) | at least 15 Wh/day | Logged energy at the load |
@@ -75,17 +80,17 @@ Prototype requirements (scaled down from the capstone design)
 | R8 | Size | footprint within 240 x 200 mm base, height about 250 mm | CAD and measurement |
 | R9 | Total budget | at most AED 800 | Final BOM |
 | R10 | Electrical safety | 2S lithium-ion pack (7.4 V nominal, 8.4 V maximum) with protection circuit and fuse, emergency disconnect in under 1 s | Safety checklist |
+
 Suggested targets and ensure that these are applicable
 
 ## Concept Selection
 
-To be updated.
+To be Updated
 
 ## System Design
 <img width="1127" height="740" alt="12aa58ae-4c10-4d4c-8165-4be6244fbec2" src="https://github.com/user-attachments/assets/ab68b49b-a6e2-4f0c-9406-19529d804254" />
 
 ### Subsystems (From the CAD Model)
-
 
 | Subsystem | Component | Notes |
 |---|---|---|
@@ -95,9 +100,29 @@ To be updated.
 | Storage | Battery holder (75 x 38 x 23 mm) in the base | 2S lithium-ion pack, 2 x 18650 in series, 7.4 V nominal |
 | Structure | Base enclosure 240 x 200 mm with removable lid | Houses electronics and battery |
 
+### Control Architecture
+
+To be updated.
+
+### Power Architecture
+
+To be updated.
+
 ## Solar Tracker Design
 
 [Download Solar Tracker AutoCAD File (.DWG)](Solar%20Tracker%20PD.dwg)
+
+| Part | Dimensions |
+|---|---|
+| Base enclosure | 240 x 200 x 52 high, 3 mm floor, 3 mm walls |
+| Removable lid | 240 x 200 x 4 |
+| Turntable | diameter 140, height 12 |
+| Yoke crosspiece | 226 x 70 x 8 |
+| Yoke arms | 8 x 50 x 122 high, two arms |
+| Pivot shaft (hardware) | diameter 8, length 226, at 183 mm height |
+| Panel tray | 185 x 218 outer, tilted 35 degrees in the model |
+| Solar panels | 2 x (173 x 99 x 2) |
+| Electronics placeholders | UNO 69 x 54 x 16, LCD window 80 x 36, battery holder 75 x 38 x 23 |
 
 ## Engineering Calculations
 
@@ -109,11 +134,38 @@ To be updated.
 
 ## Design & Manufacturing
 
-To be updated.
+Custom parts (3D printed): From the design, the yoke, turntable, panel tray frame, and the base enclosure with a lid. Everything else is purchased from multiple sites and locations.
+
+**Approximate budget for the design:**
+
+
+| Item | Target (AED) |
+|---|---|
+| 2 solar panels | 80 |
+| Battery cells, holder, 2S charger and protection | 100 |
+| Microcontroller, LCD, LDRs, current and temperature sensors | 150 |
+| 2 servos | 80 |
+| Printing and laser-cutting material | 80 |
+| Converter, fuse, switch, wiring | 60 |
+| Reserve | 250 |
+| **Total** | **800** |
 
 ## Testing and Experimental Validation
 
 To be updated.
+
+## Safety and Risk Register
+
+
+| Risk | Control |
+|---|---|
+| Lithium-ion battery overheating or overcharge in desert heat | 2S protection circuit, temperature sensor with charge cutoff above 45 degrees C, shaded and ventilated enclosure |
+| Short circuit | Fuse, wiring checked before power-up |
+| Pinch points on the turntable and tilt mechanism | Keep hands clear while powered, emergency disconnect |
+| Wind damage | Park the panels flat, test only in low wind |
+| Hot surfaces and sun exposure | Marked test area, shade for the team |
+| Dust ingress into electronics | Closed enclosure and lid, cable entries sealed |
+| Drone-related hazard | No flight; battery pack or dummy load only |
 
 ## Presentation 1
 
